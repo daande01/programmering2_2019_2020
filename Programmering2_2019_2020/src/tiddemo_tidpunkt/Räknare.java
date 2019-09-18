@@ -2,6 +2,7 @@ package tiddemo_tidpunkt;
 
 public class Räknare {
 
+	//j
 	private int räknare;
 	private int max;
 	private int min;
