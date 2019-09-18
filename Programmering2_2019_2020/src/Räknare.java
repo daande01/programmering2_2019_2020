@@ -1,4 +1,4 @@
-package tiddemo_tidpunkt;
+
 
 public class Räknare {
 
