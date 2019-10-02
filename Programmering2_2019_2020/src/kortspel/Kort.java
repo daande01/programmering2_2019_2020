@@ -5,8 +5,8 @@ public class Kort {
 	private int valör;
 	private int färg;
 
-	private final String vv[]= {"två","tre","fyra","fem","sex","sju","åtta","nio","tio","knekt","dam","kung","ess"};
-	private final String ff[]= {"hjärter","ruter","spader","klöver"};
+	public static final String vv[]= {"två","tre","fyra","fem","sex","sju","åtta","nio","tio","knekt","dam","kung","ess"};
+	public static final String ff[]= {"hjärter","ruter","spader","klöver"};
 
 	public Kort(int v , int f) {
 
