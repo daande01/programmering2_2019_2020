@@ -2,7 +2,7 @@ package synlighet2;
 
 public class synlighetsuper {
 
-	protected int i=4;
+	public int i=4;
 
 
 

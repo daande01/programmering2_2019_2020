@@ -22,6 +22,9 @@ public class syntestmain extends synlighetsuper {
 public static void main(String[] args) {
 
 	syntestmain m1= new syntestmain();
+	System.out.print(m1.i);
+
+
 	m1.printprotectedsupervariablei();
 	System.out.println(m1.i);
 
