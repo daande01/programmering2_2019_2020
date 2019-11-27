@@ -24,6 +24,7 @@ public class Fönster extends JFrame {
 		l.setText(Integer.toString(räknare));
 		setVisible(true);
 
+
 		b.addActionListener(e->{
 			räknare++;
 			f[räknare]=new Fönster();

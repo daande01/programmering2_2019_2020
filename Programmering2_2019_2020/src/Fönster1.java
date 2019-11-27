@@ -16,6 +16,7 @@ public class Fönster1 extends JFrame {
 	private JButton b = new JButton("click");
 	private JLabel l = new JLabel("välkommen");
 
+
 	public Fönster1() {
 
 		this.setLayout(new FlowLayout());
