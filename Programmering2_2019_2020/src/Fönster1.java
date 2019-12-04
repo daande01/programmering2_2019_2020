@@ -31,9 +31,9 @@ public class Fönster1 extends JFrame {
 
 			f.add(new Fönster1());
 
-			for (Fönster1 fönster1 : f) {
+			for (Fönster1 fönst : f) {
 
-				fönster1.l.setText("" + räknare);
+				fönst.l.setText("" + räknare);
 
 			}
 
