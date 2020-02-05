@@ -12,6 +12,12 @@ public class Bil {
 
 	}
 
+	public void setÄgare(Bilägare  bä) {
+
+		this.ägare=bä;
+
+	}
+
 
 
 

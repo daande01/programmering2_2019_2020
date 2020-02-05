@@ -10,6 +10,16 @@ public class Bilägare extends Person {
 
 	}
 
+	public void köp(Bil b) {
+
+	äger=null;
+
+	this.äger=b;
+
+	b.setÄgare(this);
+
+	}
+
 
 
 

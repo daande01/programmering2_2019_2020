@@ -12,6 +12,20 @@ public class Mainclass {
 
 		b1.köp(bil1);
 
+		// köp bil
+
+
+		// fråga vem som ärger bil1
+		// fråga vem som äger bil2
+		// vilken bil äger bilägare b1
+		// vilken bil äger bilägare b2
+		// köpa bil av annan person
+
+		// fråga vem som ärger bil1
+		// fråga vem som äger bil2
+		// vilken bil äger bilägare b1
+				// vilken bil äger bilägare b2
+
 		System.out.println(b1.getName());
 	}
 
