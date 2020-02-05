@@ -28,7 +28,7 @@ public class Person {
 	}
 
 	public void bröllop(Person p) {
-		makeMaka = p;
+		this.makeMaka = p;
 		p.makeMaka = this;
 	}
 
