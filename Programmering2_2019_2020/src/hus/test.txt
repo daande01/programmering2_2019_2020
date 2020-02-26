@@ -1,0 +1,40 @@
+Hus h = new Hus();
+		Bostadshus b = new Bostadshus();
+		Flerfamiljshus f = new Flerfamiljshus();
+		h.större(b);
+		h=b;
+		h=f;
+		//b=h;  // går ej, fel
+
+		b=(Bostadshus) h;   // går men farligt om h inte är ett bostads hus
+
+		// bättre
+
+		if (h instanceof Bostadshus) {
+			b=(Bostadshus) h;
+		}
+
+		// vill man komma åt dolda instansvariabler utifrån får man jobba med referenser.
+		Hus hh;
+
+		Flerfamiljshus ff= new Flerfamiljshus();
+
+		hh = ff;
+		hh.senasteRenovering=2001;
+		ff.senasteRenovering=2020;
+
+
+		//plymorfism och dynamisk bindning
+
+
+		Bostadshus b1 = new Bostadshus();
+		Flerfamiljshus f1= new Flerfamiljshus();
+		b1.bredd=10; b1.längd=20; b1.antalVåningar=3;
+		f1.bredd=10; f1.längd=20; f1.antalVåningar=3;
+
+		Bostadshus b2;
+		b2=f1;
+
+		System.out.println(b1.yta());
+		System.out.println(f1.yta());
+		System.out.println(b2.yta());
