@@ -1,5 +1,5 @@
 
-public class Hus {
+public  class Hus {
 
 	double längd;
 	double bredd;
