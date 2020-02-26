@@ -3,49 +3,48 @@
  */
 package polymorfism2;
 
-
 interface AnimalInterface {
-    String getName();
-    String makeSound();
+	String getName();
+
+	String makeSound();
 }
 
 abstract class Animal implements AnimalInterface {
-    private final String name;
+	private final String name;
 
-    protected Animal(String name) {
-        this.name = name;
-    }
+	protected Animal(String name) {
+		this.name = name;
+	}
 
-    @Override
+	@Override
 	public String getName() {
-        return this.name;
-    }
+		return this.name;
+	}
 
-    @Override
+	@Override
 	public String makeSound() {
-        return "";
-    }
+		return "";
+	}
 }
 
 class Cat extends Animal {
-    public Cat(String name) {
-        super(name);
-    }
+	public Cat(String name) {
+		super(name);
+	}
 
-    @Override
-    public String makeSound() {
-        return "Meooow";
-    }
+	@Override
+	public String makeSound() {
+		return "Meooow";
+	}
 }
 
 class Dog extends Animal {
-    public Dog(String name) {
-        super(name);
-    }
+	public Dog(String name) {
+		super(name);
+	}
 
-    @Override
-    public String makeSound() {
-        return "Woof! Woof!";
-    }
+	@Override
+	public String makeSound() {
+		return "Woof! Woof!";
+	}
 }
-

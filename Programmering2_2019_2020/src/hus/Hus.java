@@ -1,6 +1,6 @@
 package hus;
 
-public  class Hus {
+public class Hus {
 
 	double längd;
 	double bredd;
@@ -9,17 +9,18 @@ public  class Hus {
 
 	public double yta() {
 
-		return bredd* längd*antalVåningar;
+		return bredd * längd * antalVåningar;
 	}
+
 	public boolean större(Hus annat) {
-		return yta() >annat.yta();
+		return yta() > annat.yta();
 	}
 
 	public static void main(String[] args) {
 
 		Hus h = new Hus();
-		Bostadshus b= new Bostadshus();
-		Flerfamiljshus f= new Flerfamiljshus();
+		Bostadshus b = new Bostadshus();
+		Flerfamiljshus f = new Flerfamiljshus();
 //		h.större(b);
 //		h=b;
 //		h=f;
@@ -31,7 +32,7 @@ public  class Hus {
 //			b= (Bostadshus)h;
 //		}
 
-		//__________komma åt dolda variabler i från main _______________
+		// __________komma åt dolda variabler i från main _______________
 
 //		Hus hh;
 //		Flerfamiljshus ff= new Flerfamiljshus();
@@ -39,15 +40,19 @@ public  class Hus {
 //		ff.senasteRenovering=2018;
 //		hh=ff;
 //		hh.senasteRenovering=2020;
-		//____________polymorfism dynamiskbindning_______________
+		// ____________polymorfism dynamiskbindning_______________
 
 		Bostadshus b1 = new Bostadshus();
 		Flerfamiljshus f1 = new Flerfamiljshus();
-		b1.bredd=10; b1.längd=20; b1.antalVåningar=3;
-		f1.bredd=10; f1.längd=20; f1.antalVåningar=3;
+		b1.bredd = 10;
+		b1.längd = 20;
+		b1.antalVåningar = 3;
+		f1.bredd = 10;
+		f1.längd = 20;
+		f1.antalVåningar = 3;
 
 		Bostadshus b2;
-		b2=f1;
+		b2 = f1;
 
 		System.out.println(b1.yta());
 		System.out.println(f1.yta());
@@ -63,29 +68,33 @@ class Bostadshus extends Hus {
 
 	public void isolera() {
 
-		tilläggsIsolerat=true;
+		tilläggsIsolerat = true;
 	}
 
 }
 
-class Flerfamiljshus extends Bostadshus{
+class Flerfamiljshus extends Bostadshus {
 	int antalLägenheter;
 	int senasteRenovering; // avser inre renovering
-	static final double hyraPerM2=1000;
-	public double  beräknaHyresInkomst() {
+	static final double hyraPerM2 = 1000;
 
-		return yta()*hyraPerM2;
+	public double beräknaHyresInkomst() {
+
+		return yta() * hyraPerM2;
 	}
-	public void renovera (int yttre , int inre) {
-		// dolda instancvariabler använd super för att komma åt förälders dolda instansvariabel
-		super.senasteRenovering =yttre;
+
+	public void renovera(int yttre, int inre) {
+		// dolda instancvariabler använd super för att komma åt förälders dolda
+		// instansvariabel
+		super.senasteRenovering = yttre;
 		this.senasteRenovering = inre;
 	}
-	@Override  // kompilation kommer nu att kontrollera så att det finns en yta metod i superklassen
-	 public double yta() {
 
-		 return längd * bredd * antalVåningar * 0.95;
+	@Override // kompilation kommer nu att kontrollera så att det finns en yta metod i
+				// superklassen
+	public double yta() {
+
+		return längd * bredd * antalVåningar * 0.95;
 	}
-
 
 }
