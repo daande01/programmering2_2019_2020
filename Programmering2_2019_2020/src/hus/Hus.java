@@ -38,6 +38,7 @@ public class Hus {
 //		Flerfamiljshus ff= new Flerfamiljshus();
 //
 //		ff.senasteRenovering=2018;
+
 //		hh=ff;
 //		hh.senasteRenovering=2020;
 		// ____________polymorfism dynamiskbindning_______________
