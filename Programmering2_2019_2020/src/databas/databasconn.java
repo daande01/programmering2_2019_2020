@@ -2,9 +2,8 @@ package databas;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class databasconn {
 
@@ -14,7 +13,7 @@ public class databasconn {
 
 		try {
 
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cars1", "root", "");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cars1?autoReconnect=true&useSSL=false", "root", "");
 			// Do something with the Connection
 		} catch (SQLException ex) {
 			// handle any errors
@@ -30,5 +29,30 @@ public class databasconn {
 		}
 
 	}
+
+
+	public void insert(String namn) throws SQLException {
+
+		// the mysql insert statement
+		String query = " insert into bilar (marke, modell, prisexkl) values (?, ?, ?)";
+
+		// create the mysql insert preparedstatement
+		PreparedStatement preparedStmt = conn.prepareStatement(query);
+		preparedStmt.setString(1, namn);
+		preparedStmt.setString(2, "xc90");
+		preparedStmt.setInt(3, 1212);
+
+
+		// execute the preparedstatement
+		preparedStmt.execute();
+
+		conn.close();
+
+
+
+
+	}
+
+
 
 }

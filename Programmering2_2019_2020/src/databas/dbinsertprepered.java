@@ -35,7 +35,7 @@ public class dbinsertprepered {
 		// create the mysql insert preparedstatement
 		PreparedStatement preparedStmt = conn.prepareStatement(query);
 		preparedStmt.setString(1, "volvo");
-		preparedStmt.setString(2, "s80");
+		preparedStmt.setString(2, "xc90");
 		preparedStmt.setInt(3, 1212);
 
 

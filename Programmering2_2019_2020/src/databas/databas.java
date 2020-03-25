@@ -8,8 +8,7 @@ import java.sql.Statement;
 
 public class databas {
 
-	public static void main(String[] arg)
-			throws java.lang.IllegalAccessException, java.lang.InstantiationException, java.sql.SQLException {
+	public static void main(String[] arg) throws java.lang.IllegalAccessException, java.lang.InstantiationException, java.sql.SQLException {
 		Connection conn = null;
 
 		try {
