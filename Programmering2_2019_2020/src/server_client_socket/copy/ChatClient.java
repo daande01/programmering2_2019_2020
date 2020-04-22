@@ -1,4 +1,4 @@
-package server_client_socket;
+package server_client_socket.copy;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

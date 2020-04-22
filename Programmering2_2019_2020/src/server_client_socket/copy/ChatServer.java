@@ -1,7 +1,7 @@
 
 
 // skapa flera chat rum
-package server_client_socket;
+package server_client_socket.copy;
 
 import java.io.BufferedReader;
 import java.io.IOException;
