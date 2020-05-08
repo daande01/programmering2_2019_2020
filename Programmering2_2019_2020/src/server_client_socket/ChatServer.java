@@ -142,6 +142,14 @@ public class ChatServer {
 					if (input == null) {
 						return;
 					}
+
+
+					for (PrintWriter writer : writers) {
+						writer.println("USERLIST " + "daniel göran bert");
+					}
+
+
+
 					if (input.startsWith("user:")) {
 
 						//   user:daniel hej daniel hur mår du
@@ -150,9 +158,9 @@ public class ChatServer {
 
 						// 2  nu har vi namnet , hitta pos för namnet i names listan "daniel = 0"
 
+						int pos=names.indexOf("daniel");
 
-
-						  writers.get(index).println("pm"+ input);
+						  writers.get(pos).println("pm"+ input);
 
 
 

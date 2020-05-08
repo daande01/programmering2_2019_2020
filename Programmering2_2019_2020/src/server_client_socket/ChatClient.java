@@ -1,7 +1,5 @@
 package server_client_socket;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -53,17 +51,16 @@ public class ChatClient {
 		frame.pack();
 
 		// Add Listeners
-		textField.addActionListener(new ActionListener() {
+		textField.addActionListener(e-> {
 			/**
 			 * Responds to pressing the enter key in the textfield by sending the contents
 			 * of the text field to the server. Then clear the text area in preparation for
 			 * the next message.
 			 */
-			@Override
-			public void actionPerformed(ActionEvent e) {
+
 				out.println(textField.getText());
 				textField.setText("");
-			}
+
 		});
 	}
 
